@@ -1,0 +1,117 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.border-black {
+	border: 1px solid black;
+}
+
+.header-container {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.logo-container {
+	display: flex;
+	gap: 10px;
+	margin-left: 15px;
+}
+
+.book-icon {
+	padding-top: 12px;
+}
+
+#logo-txt {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.redes-sociales {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-right: 15px;
+}
+
+nav ul {
+	list-style: none;
+}
+
+.header-nav {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 15px;
+	margin-right: 25px;
+	gap: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: White;
+	font-weight: bold;
+}
+
+#footer {
+	background: #000000;
+	color: #ddd;
+	height: 200px;
+	text-align: center;
+	width: 100%;
+}
+
+#footer h3 {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 40px 0 30px 0;
+}
+
+#footer p {
+	font-size: 13px;
+	margin: 20px 10% 20px 10%;
+}
+
+#footer p:nth-of-type(2) a {
+	color: #ddd;
+	text-decoration: none;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%; /* para que ocupe todo el ancho de la página */
+}
+
+.bg-black {
+	background-color: black;
+	height: 50px;
+}
+
+.field {
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 100px;
+	border-radius: 50px;
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	align-items: center;
+	gap: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
