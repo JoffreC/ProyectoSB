@@ -13,8 +13,10 @@ public class test {
 		prestamista.setAddress("Guajalo");
 		prestamista.setCI("172600435");
 		prestamista.setName("Jimmy");
-		DAOFactory.getFactory().getPrestamistaDAO().create(prestamista);
 		
+		for(int i=0;i<5;i++) {
+			DAOFactory.getFactory().getPrestamistaDAO().create(prestamista);
+		}
 		
 		Libro libro = new Libro();
 		libro.setAuthor("Jimmy");
@@ -25,10 +27,10 @@ public class test {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // Crear un formateador
 		String fechaFormateada = fecha.format(formatter);
 		libro.setRegistrationDate(fechaFormateada);
-		System.out.println("dffdsfdsfsdf");
-		System.out.println(fechaFormateada);
+		for(int i=0;i<5;i++) {
+			DAOFactory.getFactory().getLibroDAO().create(libro);
+		}
 		
-		DAOFactory.getFactory().getLibroDAO().create(libro);
 		
 		/*
 		 * PrestamoLibro prestamoLibro = new PrestamoLibro();

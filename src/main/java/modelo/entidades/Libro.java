@@ -32,6 +32,7 @@ public class Libro implements Serializable {
 		private String registrationDate;
 	
 	@ManyToOne
+    @JoinColumn(name = "prestamo_id")
 	private PrestamoLibro prestamoLibro;
 	
 

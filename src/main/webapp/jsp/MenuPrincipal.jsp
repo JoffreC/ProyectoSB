@@ -33,7 +33,7 @@
         <ul class="nav-container">
           <li><a href="GestionarUsuarioController?ruta=formPrestamista">Registrar Prestamista</a></li>
           <li><a href="GestionarLibroController?ruta=menu">Gestión Libros</a></li>
-          <li><a href="GestionarPrestamoController?ruta=form">Registrar Préstamo</a></li>
+          <li><a href="GestionarPrestamoController?ruta=menu">Registrar Préstamo</a></li>
         </ul>
       </nav>
     </section>

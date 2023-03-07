@@ -25,9 +25,13 @@ public class Prestamista implements Serializable {
 	@Column(name = "lender_address")
 	private String address;
 	
+	@ManyToOne
+	@JoinColumn(name = "prestamo_id")
+	private PrestamoLibro prestamoLibro;
+	
 
 	public Prestamista() {
-		super();
+		
 	}   
 	public Integer getId() {
 		return this.id;
@@ -56,6 +60,12 @@ public class Prestamista implements Serializable {
 
 	public void setAddress(String adress) {
 		this.address = adress;
+	}
+	public PrestamoLibro getPrestamoLibro() {
+		return prestamoLibro;
+	}
+	public void setPrestamoLibro(PrestamoLibro prestamoLibro) {
+		this.prestamoLibro = prestamoLibro;
 	}
    
 }

@@ -29,17 +29,20 @@ public class PrestamoLibro implements Serializable {
 	@Column(name = "mulct")
 	private double mulct;
 	
-	@ManyToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name = "lender_id")
+	@Column(name = "days_lended")
+	private int daysLended;
+	
+	@ManyToOne
+	@JoinColumn(name = "prestamista_id")
 	private Prestamista prestamista;
 	
 	@OneToMany(mappedBy = "prestamoLibro")
-	
 	private List<Libro> bookLendedList;
 
+	
 	public PrestamoLibro() {
 		bookLendedList = new ArrayList<>();
-		
+		this.mulct = 0.0;
 	}   
 	public Integer getId() {
 		return this.id;
@@ -72,6 +75,14 @@ public class PrestamoLibro implements Serializable {
 	public void setBookLendedList(List<Libro> bookLensdedList) {
 		this.bookLendedList = bookLensdedList;
 	}
+	public int getDaysLended() {
+		return daysLended;
+	}
+	public void setDaysLended(int daysLended) {
+		this.daysLended = daysLended;
+	}
+	
+	
 	
 	
    
