@@ -14,10 +14,10 @@ public class JPALibroDAO extends JPAGenericDAO<Libro, Integer> implements LibroD
 	}
 	
 	
-	public Libro getByISBN(String isbn) {
-	    String jpql = "SELECT l FROM Libro l WHERE l.ISBN = :isbn";
+	public Libro getByISBN(String id) {
+	    String jpql = "SELECT l FROM Libro l WHERE l.id = :id";
 	    TypedQuery<Libro> query = em.createQuery(jpql, Libro.class);
-	    query.setParameter("isbn", isbn);
+	    query.setParameter("id", id);
 	    return query.getSingleResult();
 	}
 

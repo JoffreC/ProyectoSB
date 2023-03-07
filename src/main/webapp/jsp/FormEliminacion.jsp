@@ -38,14 +38,14 @@
 	<h3>Tabla Libros Existentes</h3>
 	<table>
 		<tr>
-			<th>ISBN</th>
+			<th>ID</th>
 			<th>Título</th>
 			<th>Género</th>
 		</tr>
 		<tr>
 			<c:forEach items="${libros}" var="Libro">
 				<tr>
-					<td>${Libro.ISBN}</td>
+					<td>${Libro.id}</td>
 					<td>${Libro.tittle}</td>
 					<td>${Libro.gender}</td>
 				</tr>
@@ -59,8 +59,8 @@
 			<form class="formulario"
 				action="GestionarLibroController?ruta=eliminar" method="POST">
 				
-				<label for="direccion">Digite el ISBN corréctamente: </label> <input
-					type="text" name="isbn" required> <input type="submit"
+				<label for="direccion">Digite el ID a eliminar: </label> <input
+					type="text" name="id" required> <input type="submit"
 					value="Eliminar">
 			</form>
 		</fieldset>

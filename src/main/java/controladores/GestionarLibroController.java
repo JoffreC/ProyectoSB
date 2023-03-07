@@ -88,9 +88,9 @@ public class GestionarLibroController extends HttpServlet {
 		
 		
 		
-		String isbn = request.getParameter("isbn");
+		String id = request.getParameter("id");
 		
-		Libro libro= DAOFactory.getFactory().getLibroDAO().getByISBN(isbn);
+		Libro libro= DAOFactory.getFactory().getLibroDAO().getById(Integer.parseInt(id));
 		DAOFactory.getFactory().getLibroDAO().deleteById(libro.getId());
 		request.getRequestDispatcher("jsp/MenuPrincipal.jsp").forward(request, response);//forward, envía datos del request y response
 	}
