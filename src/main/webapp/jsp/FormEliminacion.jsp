@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Eliminar Libro</title>
 <link rel="stylesheet" href="css/estilo.css">
+<script
+      src="https://kit.fontawesome.com/3a2a321853.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
 	<section class="header-container">
@@ -24,11 +29,31 @@
 	<section class="header-nav border-black">
 		<nav class="bg-black">
 			<ul class="nav-container">
-				<li><a href="GestionarUsuarioController?ruta=inicio">Menú
-						Principal</a></li>
+				<li><a href="GestionarUsuarioController?ruta=inicio">Menú Principal</a></li>
 			</ul>
 		</nav>
 	</section>
+	<br>
+	<section class="tabla-container">
+	<h3>Tabla Libros Existentes</h3>
+	<table>
+		<tr>
+			<th>ISBN</th>
+			<th>Título</th>
+			<th>Género</th>
+		</tr>
+		<tr>
+			<c:forEach items="${libros}" var="Libro">
+				<tr>
+					<td>${Libro.ISBN}</td>
+					<td>${Libro.tittle}</td>
+					<td>${Libro.gender}</td>
+				</tr>
+			</c:forEach>
+		</tr>
+	</table>
+	</section>
+	
 	<section class="form-prestamista">
 		<fieldset class="field">
 			<form class="formulario"

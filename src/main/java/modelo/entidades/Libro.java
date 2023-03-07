@@ -3,8 +3,7 @@ package modelo.entidades;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
-import java.sql.Date;
-import java.time.LocalDate;
+
 
 import javax.persistence.*;
 
@@ -87,6 +86,12 @@ public class Libro implements Serializable {
 	public void setPrestamoLibro(PrestamoLibro prestamoLibro) {
 		this.prestamoLibro = prestamoLibro;
 	}
+	@Override
+	public String toString() {
+		return "Libro [id=" + id + ", ISBN=" + ISBN + ", tittle=" + tittle + ", author=" + author + ", gender=" + gender
+				+ ", registrationDate=" + registrationDate + ", prestamoLibro=" + prestamoLibro + "]";
+	}
+	
 	
 	
 	

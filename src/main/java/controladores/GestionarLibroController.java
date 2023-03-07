@@ -1,6 +1,9 @@
 package controladores;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -74,13 +77,24 @@ public class GestionarLibroController extends HttpServlet {
 		request.getRequestDispatcher("jsp/MenuPrincipal.jsp").forward(request, response);
 	}
 	private void mostrarFormEliminacion(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		List<Libro> libros = DAOFactory.getFactory().getLibroDAO().getListLibros();
+		for(int i =0; i<libros.size();i++) {
+			System.out.println(libros.get(i).toString());
+		}
+		request.setAttribute("libros", libros);
 		request.getRequestDispatcher("jsp/FormEliminacion.jsp").forward(request, response);
 	}
 	private void eliminarLibro(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		
+		
+		
 		String isbn = request.getParameter("isbn");
 		
 		Libro libro= DAOFactory.getFactory().getLibroDAO().getByISBN(isbn);
 		DAOFactory.getFactory().getLibroDAO().deleteById(libro.getId());
-		request.getRequestDispatcher("jsp/MenuPrincipal.jsp").forward(request, response);
+		request.getRequestDispatcher("jsp/MenuPrincipal.jsp").forward(request, response);//forward, envía datos del request y response
 	}
+	
+	
+	
 }

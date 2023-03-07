@@ -22,4 +22,12 @@ public class JPALibroDAO extends JPAGenericDAO<Libro, Integer> implements LibroD
 	}
 
 
+	@Override
+	public List<Libro> getListLibros() {
+		 
+		return  em.createQuery("SELECT l FROM Libro l", Libro.class).getResultList();
+	}
+	
+
+
 }

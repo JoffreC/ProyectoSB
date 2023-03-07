@@ -6,6 +6,10 @@
 <meta charset="ISO-8859-1">
 <title>Form Libro</title>
 <link rel="stylesheet" href="css/estilo.css">
+<script
+      src="https://kit.fontawesome.com/3a2a321853.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
     <section class="header-container">
